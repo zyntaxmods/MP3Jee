@@ -80,6 +80,7 @@ header a:hover{
   justify-content: center;
   align-items: center;
   margin-top:100px;
+  margin-bottom:120px;
 }
 .cont {
   border: 1px solid gray;
@@ -102,7 +103,6 @@ header a:hover{
   margin-left:20px;
   margin-right: 20px;
   margin-top:120px;
-  margin-bottom:120px;
   gap:5%;
   position: relative;
 }
