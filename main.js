@@ -15,7 +15,11 @@ function revert(){
 let convertBtn = document.getElementById("btn").addEventListener('click', function(){
   change();
   let user = document.getElementById("user").value;
-  
+  if(user == ''){
+    alert("Please Enter URL");
+    revert();
+    return;
+  }
   function extractYouTubeID(url) {
     const regex = /(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
     const match = url.match(regex);
@@ -23,7 +27,11 @@ let convertBtn = document.getElementById("btn").addEventListener('click', functi
   }
   
   const videoId = extractYouTubeID(user);
-  
+  if(!videoId){
+    alert("Wrong url format");
+    revert();
+    return;
+  }
   const url = `https://youtube-mp36.p.rapidapi.com/dl?id=${videoId}`;
 const options = {
   method: 'GET',
@@ -48,6 +56,9 @@ fetch(url, options)
   }
   else if(data.msg == "failed"){
     message.style.color = "red";
+  }
+  else if(data.msg == "in process"){
+    message.textContent = "Convert again"
   }
   let dlBtn = document.createElement("button");
   let dlUrl = document.createElement("a");
