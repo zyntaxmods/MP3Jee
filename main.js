@@ -60,6 +60,12 @@ fetch(url, options)
   else if(data.msg == "in process"){
     message.textContent = "Convert again"
   }
+  if(data.status == "fail"){
+    alert("Failed fetching data Try again");
+  }
+  else if(data.status == "processing"){
+    alert("Your music is on progress convert again to see status");
+  }
   let dlBtn = document.createElement("button");
   let dlUrl = document.createElement("a");
   dlUrl.href = data.link;
