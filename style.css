@@ -162,6 +162,27 @@ footer{
   box-shadow:-2px -2px 2px #00000026,
   2px 2px 2px #f9f9f9;
 }
+.coffee{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.coffee img{
+  width:20px;
+  height: 20px;
+}
+.coffee button{
+  text-align: center;
+  padding:10px 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  box-shadow:6px 6px 10px gray, -3px -3px 5px darkgray;
+  border:none;
+}
+.coffee button:hover{
+  box-shadow:-3px -3px 10px darkgray, 6px 6px 5px white;
+}
 @media screen and (max-width: 500px){
   body,html{
     overflow-x: hidden;
@@ -186,7 +207,7 @@ footer{
     margin:0;
     width:auto;
     height:auto;
-    margin-bottom:200px;
+    margin-bottom:100px;
     border-radius:10px;
     border:1px solid gray;
     padding:12px 12px;
@@ -214,5 +235,11 @@ footer{
   }
   #resultBox{
     font-size:10px;
+  }
+  .coffee{
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    margin-bottom:200px;
   }
 }

@@ -64,3 +64,7 @@ fetch(url, options)
 });
   
 })
+
+let buy = document.getElementById("buy").addEventListener('click', function() {
+  window.location.href = "https://buymeacoffee.com/mp3jee";
+})
