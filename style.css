@@ -9,6 +9,7 @@ html,body{
   flex-direction: column;
   background: white;
   font-family: "Poppins", sans-serif;
+  transition: 0.5s ease-in-out;
 }
 main{
   flex:1;
@@ -24,6 +25,10 @@ header{
   align-items: center;
   background: white;
   margin:20px 20px;
+  transition: 0.5s ease-in-out;
+}
+.dark a{
+  color:white;
 }
 header a{
   font-size: 25px;
@@ -36,7 +41,7 @@ header a{
 }
 header a:hover{
   border-bottom:2px solid black;
-  transition: 1s ease-in;
+  transition: 1s ease-in-out;
 }
 
 .logo img{
@@ -55,6 +60,7 @@ header a:hover{
 .feautures img{
   width:50px;
   height:50px;
+  transition: 2s ease-in-out;
 }
 .feautures{
   display:flex;
@@ -92,8 +98,12 @@ header a:hover{
   position: relative;
   z-index: 1;
   overflow:hidden;
+  transition: 1s ease-in-out;
 }
-
+.darkCont{
+  background: darkgray;
+  box-shadow:0px 1px 10px gray, -6px -6px 10px dimgray;
+}
 .mainCont{
   display:flex;
   justify-content: center;
@@ -183,6 +193,33 @@ footer{
 .coffee button:hover{
   box-shadow:-3px -3px 10px darkgray, 6px 6px 5px white;
 }
+.modeCont{
+  right:5px;
+  top:100px;
+  z-index: 1000;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+#dark{
+  width:60px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding:30px 30px;
+  text-align: center;
+  border-radius:100px;
+  transition: 1s ease-in-out;
+}
+#dark img{
+  width: 50px;
+  height: 50px;
+}
+#darkLogo img,
+#darkLogo1 img{
+  transition: 1s ease-in-out;
+}
 @media screen and (max-width: 500px){
   body,html{
     overflow-x: hidden;
@@ -241,5 +278,22 @@ footer{
     align-items: center;
     margin:auto;
     margin-bottom:200px;
+  }
+  .modeCont{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  #dark{
+    width:30px;
+    height: 30px;
+    padding:20px 20px;
+    display:flex;
+    justify-content: center;
+  }
+  #dark img{
+    width:30px;
+    height: 30px;
   }
 }

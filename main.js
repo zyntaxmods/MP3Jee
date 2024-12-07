@@ -85,3 +85,50 @@ fetch(url, options)
 let buy = document.getElementById("buy").addEventListener('click', function() {
   window.location.href = "qr.html";
 })
+var option = false;
+let mode = document.getElementById("dark").addEventListener('click', function(){
+  let head = document.getElementById("head");
+  let imgMode = document.getElementById("darkMode");
+  let darkAssurance = document.getElementById("darkAssurance");
+  let darkads = document.getElementById("darkAds");
+  let darkarrow = document.getElementById("darkArrow");
+  let darkunli = document.getElementById("darkUnli");
+  let btn = document.getElementById("dark");
+  let darkCard = document.getElementById("darkCont");
+  let darklogo = document.getElementById("darkLogo");
+  let darklogo1 = document.getElementById("darkLogo1");
+  if(option){
+    btn.style.boxShadow = "0px 0px 20px white";
+    btn.style.backgroundColor = "gray";
+    darkAssurance.src = "./dark/assuranced.png"
+    darkads.src = "./dark/darkAd.png";
+    imgMode.src = "./dark/light-bulb.png";
+    darkarrow.src = "./dark/tech.png";
+    darkunli.src = "./dark/unlimited-storage.png";
+    darklogo.src = "./dark/darkLogo1.jpg";
+    darklogo1.src = "./dark/darkLogo1.jpg";
+    darkCard.classList.toggle("darkCont");
+    head.style.backgroundColor = "black";
+    head.classList.toggle("dark");
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+    alert("Not yet finished ");
+  }
+  else{
+    let imgMode = document.getElementById("darkMode");
+    head.style.backgroundColor = "white";
+    head.classList.remove("dark");
+    imgMode.src = "./dark/house-rules.png";
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+    darkAssurance.src = "./icons/assurance.png"
+    darkads.src = "./icons/ad-block.png";
+    darkarrow.src = "./icons/arrow.png";
+    darkunli.src = "./icons/unlimited.png";
+    darkCard.classList.remove("darkCont");
+    btn.style.backgroundColor = "white";
+    darklogo.src = "./logo/logo.jpg";
+    darklogo1.src = "./logo/logo.jpg";
+  }
+  option = !option;
+})
