@@ -106,8 +106,8 @@ let mode = document.getElementById("dark").addEventListener('click', function(){
     imgMode.src = "./dark/light-bulb.png";
     darkarrow.src = "./dark/tech.png";
     darkunli.src = "./dark/unlimited-storage.png";
-    darklogo.src = "./dark/darkLogo1.jpg";
-    darklogo1.src = "./dark/darkLogo1.jpg";
+    darklogo.src = "./logo1/zy.jpg";
+    darklogo1.src = "./logo1/zy.jpg";
     darkCard.classList.toggle("darkCont");
     head.style.backgroundColor = "black";
     head.classList.toggle("dark");
@@ -128,8 +128,8 @@ let mode = document.getElementById("dark").addEventListener('click', function(){
     darkunli.src = "./icons/unlimited.png";
     darkCard.classList.remove("darkCont");
     btn.style.backgroundColor = "white";
-    darklogo.src = "./logo/logo.jpg";
-    darklogo1.src = "./logo/logo.jpg";
+    darklogo.src = "./logo1/zy1.jpg";
+    darklogo1.src = "./logo1/zy1.jpg";
     kenshie.style.backgroundColor = "white";
   }
   option = !option;
