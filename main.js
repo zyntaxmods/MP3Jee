@@ -112,7 +112,6 @@ let mode = document.getElementById("dark").addEventListener('click', function(){
     head.classList.toggle("dark");
     document.body.style.backgroundColor = "black";
     document.body.style.color = "white";
-    alert("Not yet finished ");
   }
   else{
     let imgMode = document.getElementById("darkMode");
