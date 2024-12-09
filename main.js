@@ -97,6 +97,7 @@ let mode = document.getElementById("dark").addEventListener('click', function(){
   let darkCard = document.getElementById("darkCont");
   let darklogo = document.getElementById("darkLogo");
   let darklogo1 = document.getElementById("darkLogo1");
+  let kenshie = document.getElementById("kenshie");
   if(option){
     btn.style.boxShadow = "0px 0px 20px white";
     btn.style.backgroundColor = "gray";
@@ -112,6 +113,7 @@ let mode = document.getElementById("dark").addEventListener('click', function(){
     head.classList.toggle("dark");
     document.body.style.backgroundColor = "black";
     document.body.style.color = "white";
+    kenshie.style.backgroundColor = "black";
   }
   else{
     let imgMode = document.getElementById("darkMode");
@@ -128,6 +130,7 @@ let mode = document.getElementById("dark").addEventListener('click', function(){
     btn.style.backgroundColor = "white";
     darklogo.src = "./logo/logo.jpg";
     darklogo1.src = "./logo/logo.jpg";
+    kenshie.style.backgroundColor = "white";
   }
   option = !option;
 })
