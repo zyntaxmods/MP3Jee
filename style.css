@@ -10,6 +10,7 @@ html,body{
   background: white;
   font-family: "Poppins", sans-serif;
   transition: 0.5s ease-in-out;
+  scroll-behavior: smooth;
 }
 main{
   flex:1;
