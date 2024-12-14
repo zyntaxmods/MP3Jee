@@ -134,3 +134,5 @@ let mode = document.getElementById("dark").addEventListener('click', function(){
   }
   option = !option;
 })
+
+let jee = document.getElementById("date").textContent = new Date().getFullYear();
