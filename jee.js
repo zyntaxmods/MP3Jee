@@ -50,33 +50,39 @@ fetch(url, options)
   tiTle.textContent = data.title;
   let message = document.createElement("p");
   message.textContent = data.msg;
+  container.appendChild(tiTle);
+ container.appendChild(message);
   if(data.msg == "success"){
     message.style.color = "green";
     message.style.textTransform = "uppercase";
+    let dlBtn = document.createElement("button");
+    let dlUrl = document.createElement("a");
+       dlUrl.href = data.link;
+       dlBtn.textContent = "Download";
+       dlBtn.addEventListener('click', function() {
+  dlUrl.click();
+})
+        dlBtn.classList.toggle("dlBtn");
+   container.appendChild(dlBtn);
   }
   else if(data.msg == "failed"){
     message.style.color = "red";
   }
   else if(data.msg == "in process"){
-    message.textContent = "Convert again"
+    setTimeout(() => {
+  document.getElementById("btn").click();
+}, 5000);
+message.textContent = "please wait";
   }
   if(data.status == "fail"){
     alert("Failed fetching data Try again");
   }
   else if(data.status == "processing"){
-    alert("Your music is on progress convert again to see status");
+    setTimeout(() =>{
+      document.getElementById("btn").click();
+    }, 5000);
+    message.textContent = "please wait";
   }
-  let dlBtn = document.createElement("button");
-  let dlUrl = document.createElement("a");
-  dlUrl.href = data.link;
-  dlBtn.textContent = "Download";
-  dlBtn.addEventListener('click', function(){
-    dlUrl.click();
-  })
-  dlBtn.classList.toggle("dlBtn");
-  container.appendChild(tiTle);
-  container.appendChild(message);
-  container.appendChild(dlBtn);
   revert();
 });
   
