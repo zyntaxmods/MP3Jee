@@ -31,6 +31,7 @@ main {
     transform: translate(100%, -100%);
   }
 }
+
 header {
   display: flex;
   flex-direction: row;
@@ -39,11 +40,11 @@ header {
   background: white;
   margin: 20px 20px;
   transition: 0.5s ease-in-out;
-}
-header img {
-  width: 200px;
-  height: 120px;
-  border-radius: 20px;
+  img {
+    width: 200px;
+    height: 120px;
+    border-radius: 20px;
+  }
 }
 
 .dark a {
@@ -58,24 +59,23 @@ header a {
   font-weight: 700;
   transition: 2s ease-out;
   text-shadow: 0px 0px 10px white;
+   a:hover {
+    border-bottom: 2px solid black;
+    transition: 1s ease-in-out;
+  }
 }
-header a a:hover {
-  border-bottom: 2px solid black;
-  transition: 1s ease-in-out;
-}
-
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 150px;
-}
-.logo img {
-  width: 500px;
-  height: 300px;
-  margin: auto;
-  border-radius: 15%;
-  cursor: pointer;
+  img{
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    border-radius: 15%;
+    cursor: pointer;
+  }
 }
 
 .feautures {
@@ -83,11 +83,11 @@ header a a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.feautures img {
-  width: 50px;
-  height: 50px;
-  transition: 2s ease-in-out;
+  img {
+    width: 50px;
+    height: 50px;
+    transition: 2s ease-in-out;
+  }
 }
 
 .feaTitle {
@@ -143,17 +143,17 @@ header a a:hover {
   margin-top: 120px;
   gap: 5%;
   position: relative;
-}
-.mainCont button {
-  border: none;
-  border-radius: 25%;
-  color: whitesmoke;
-  color: black;
-  box-shadow: -6px -6px 10px #f9f9f9, 6px 6px 10px rgba(0, 0, 0, 0.1490196078);
-  font-weight: 500;
-}
-.mainCont button:hover {
-  box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.1490196078), 2px 2px 2px #f9f9f9;
+  button {
+    border: none;
+    border-radius: 25%;
+    color: whitesmoke;
+    color: black;
+    box-shadow: -6px -6px 10px #f9f9f9, 6px 6px 10px rgba(0, 0, 0, 0.1490196078);
+    font-weight: 500;
+  }
+  button:hover {
+    box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.1490196078), 2px 2px 2px #f9f9f9;
+  }
 }
 
 .mainCont input,
@@ -210,21 +210,21 @@ footer {
   align-items: center;
   flex-direction: column;
   margin-bottom: 100px;
-}
-.coffee button {
-  text-align: center;
-  padding: 10px 10px;
-  text-transform: uppercase;
-  font-weight: 700;
-  box-shadow: 6px 6px 10px gray, -3px -3px 5px darkgray;
-  border: none;
-}
-.coffee img {
-  width: 20px;
-  height: 20px;
-}
-.coffee button:hover {
-  box-shadow: -3px -3px 10px darkgray, 6px 6px 5px white;
+  button {
+    text-align: center;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: 6px 6px 10px gray, -3px -3px 5px darkgray;
+    border: none;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  button:hover {
+    box-shadow: -3px -3px 10px darkgray, 6px 6px 5px white;
+  }
 }
 
 .modeCont {
@@ -335,4 +335,5 @@ footer {
     height: 30px;
   }
 }
-/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.scss.map */
